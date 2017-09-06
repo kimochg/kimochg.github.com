@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pervade Tech</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.pervade.tech/"/>
+  <updated>2017-09-06T15:50:56.000Z</updated>
+  <id>https://blog.pervade.tech/</id>
+  
+  <author>
+    <name>Cheng Liu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Database Relationship</title>
+    <link href="https://blog.pervade.tech/2017/09/06/Database-Relationship/"/>
+    <id>https://blog.pervade.tech/2017/09/06/Database-Relationship/</id>
+    <published>2017-09-06T15:50:56.000Z</published>
+    <updated>2017-09-06T15:50:56.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hello world</title>
+    <link href="https://blog.pervade.tech/2017/09/06/hello-world/"/>
+    <id>https://blog.pervade.tech/2017/09/06/hello-world/</id>
+    <published>2017-09-06T09:01:08.000Z</published>
+    <updated>2017-09-06T09:02:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Awesome! This is my first article in Hexo !</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Awesome! This is my first article in Hexo !&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
