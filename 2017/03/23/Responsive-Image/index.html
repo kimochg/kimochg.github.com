@@ -12,7 +12,7 @@
     
     <title>
         
-            归档 | 
+            Responsive Image | 
         
         Pervade Tech
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Cheng Liu">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Note,image">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://blog.pervade.tech">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档 | Pervade Tech">
+    <meta property="og:title" content="Responsive Image | Pervade Tech">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Note"> <meta property="og:article:tag" content="image"> 
 
+    
+        <meta property="article:published_time" content="3月 23, 2017" />
+        <meta property="article:modified_time" content="9月 07, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档 | Pervade Tech">
+    <meta name="twitter:title" content="Responsive Image | Pervade Tech">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://blog.pervade.tech/archives/index.html" />
+        <link rel="canonical" href="https://blog.pervade.tech/2017/03/23/Responsive-Image/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pervade Tech",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Cheng Liu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "Enjoy Tech Here"
+    },
+    "headline": "Responsive Image",
+    "url": "https://blog.pervade.tech/2017/03/23/Responsive-Image/index.html",
+    "datePublished": "3月 23, 2017",
+    "dateModified": "9月 07, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.pervade.tech"
+    }
+}
+</script>
 
 
     
@@ -271,215 +304,276 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/06/Database-Relationship/">Database Relationship</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/06/Database-Relationship/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Cheng Liu's avatar">
-            </div>
-            <div>
-                <strong>Cheng Liu</strong>
-                <span>9月 06, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Rails/">Rails</a>
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
             </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+        </a>
     </div>
-</div>
+    -->
 
-            
-            
-        
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Purpose"><span class="post-toc-number">1.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Use-Case-Resolution-Switch"><span class="post-toc-number">2.</span> <span class="post-toc-text">Use Case: Resolution Switch</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Attribute-srcset"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Attribute: srcset</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Display-Density-Descriptors"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Display Density Descriptors</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Width-Descriptors"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Width Descriptors</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Attribute-sizes"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Attribute: sizes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Media-Condition"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">Media Condition</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lengths"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Lengths</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Make-browser-be-smart"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">Make browser be smart</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Use-Case-Art-Direction"><span class="post-toc-number">3.</span> <span class="post-toc-text">Use Case: Art Direction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Attribute-type"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Attribute: type</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Conclusions"><span class="post-toc-number">4.</span> <span class="post-toc-text">Conclusions</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Other-stuff"><span class="post-toc-number">5.</span> <span class="post-toc-text">Other stuff</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#img-fallback-of-SVG"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">img fallback of SVG</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#picture-of-SVG"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">picture of SVG</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Responsive-image-in-CSS"><span class="post-toc-number">6.</span> <span class="post-toc-text">Responsive image in CSS</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#image-set"><span class="post-toc-number">7.</span> <span class="post-toc-text">image-set</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Media-query"><span class="post-toc-number">8.</span> <span class="post-toc-text">Media query</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Break-points"><span class="post-toc-number">9.</span> <span class="post-toc-text">Break points</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Processing-Responsive-Image"><span class="post-toc-number">10.</span> <span class="post-toc-text">Processing Responsive Image</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Resources"><span class="post-toc-number">11.</span> <span class="post-toc-text">Resources</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/06/hello-world/">hello world</a></p>
-    </div>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Awesome! This is my first article in Hexo !
 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/06/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Cheng Liu's avatar">
-            </div>
-            <div>
-                <strong>Cheng Liu</strong>
-                <span>9月 06, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
                 
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/03/23/Responsive-Image/">Responsive Image</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Pu...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/03/23/Responsive-Image/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Cheng Liu's avatar">
-            </div>
-            <div>
-                <strong>Cheng Liu</strong>
-                <span>3月 23, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Image/">Image</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Responsive Image
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Cheng Liu</strong>
+        <span>3月 23, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3ElEQVR42u3awXKDMAwE0Pz/T7fXHgpZSaQF+3HKkAT7cdFo5dfXltcLGxsbGxsbGxsb+5bsV3wd/evnneTbwkaD5xf2jI2Njb00O1/+fOHeE46eOXmJ2NjY2Huyzxc+2sT5/V6J6hXL86dhY2NjYyfsc17+m/MCiY2NjY19FTtvP3qfq7/ExsbGxp40DElU1GtdbpGlYWNjY9+ePWkD/uvzn863sbGxsW/MvvYYTb7FfGDcGzz8snNsbGzsRdl5Yai2KL2jPNUnF0IubGxs7EXZvbJULVSTVXqrY2NjY+/DrrYHeckpxD1BicpLYzlLw8bGxn44Ox+vVu/3WoirQiVsbGzsfdh5fP+5IcFkP3lDgo2Njb0qOy9d88FwXqLyf10238bGxsZ+OLt6sOa8eFQ3modKeTMTFTBsbGzsRdnVMcBflsBqm4SNjY29D7s6ss1HxfmTrwqVmlMRbGxs7IezrxoM5GOAajA0aWywsbGxd2D3GMlrqkZOk6Fyc9CLjY2NvQT7qqOTefAUNQ+tozkXtCLY2NjYD2cnIU6vdPVeazWEOnzF2NjY2Iuyq9FMb0w7OQw0L4TY2NjY+7B7A9QqNY+QJlHXm1YEGxsbe1F2PmrtDXR7w+DJIBkbGxt7H/YkNsqDpHwkkEf/hXgLGxsbewN2tRQlW0/u9FqgauyFjY2NvTa7Vxjy0L+HyZ8TxVXY2NjY27DzBqAa0OfNRq91eTNmwMbGxt6AnSw8D4aqrzUfMLzZFTY2Nvai7OqVtBbVMCgveNVvsbGxsXdgVwtDPtztRf/zz4VQCRsbG3sh9iTW6cU91RYl/7ZwZAcbGxt7OXZeePIGozpg6F3RC8LGxsbGDn5TbWOSwlPd22i+jY2Njb0Ne7LpPNZP2qS8dcHGxsbegZ0vPzmy2QuMJgeAsLGxsXdg9w41FoasxYM7kyHER+bb2NjY2Ddm73NhY2NjY2NjY2Nj3+b6BjKEr/IB2ngHAAAAAElFTkSuQmCC">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Note/">Note</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/image/">image</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Responsive Image&url=https://blog.pervade.tech/2017/03/23/Responsive-Image/index.html&via=Cheng Liu" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.pervade.tech/2017/03/23/Responsive-Image/index.html&title=Responsive Image" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h1><p>high-res devices can get the optimum image for a given resolution, while low-resolution devices can avoid wasting time and bandwidth downloading overly-large files.</p>
+<p>img</p>
+<ul>
+<li>fixed width, single density web page</li>
+<li>small difference in file size</li>
+<li>SVG, vector-based image</li>
+</ul>
+<p><img src="/media/15047511251362.jpg" alt=""></p>
+<h1 id="Use-Case-Resolution-Switch"><a href="#Use-Case-Resolution-Switch" class="headerlink" title="Use Case: Resolution Switch"></a>Use Case: Resolution Switch</h1><p>Resolution switching is the most common use case. It refers to any scenario where you all you want to do is provide different sizes of an image and you’re not making any modifications to the content or aspect ratio of the image.</p>
+<p><img src="/media/15047511666151.jpg" alt=""></p>
+<h2 id="Attribute-srcset"><a href="#Attribute-srcset" class="headerlink" title="Attribute: srcset"></a>Attribute: srcset</h2><h3 id="Display-Density-Descriptors"><a href="#Display-Density-Descriptors" class="headerlink" title="Display Density Descriptors"></a>Display Density Descriptors</h3><p><img src="/media/15047511772943.jpg" alt=""></p>
+<h3 id="Width-Descriptors"><a href="#Width-Descriptors" class="headerlink" title="Width Descriptors"></a>Width Descriptors</h3><p><img src="/media/15047511881117.jpg" alt=""></p>
+<h2 id="Attribute-sizes"><a href="#Attribute-sizes" class="headerlink" title="Attribute: sizes"></a>Attribute: sizes</h2><p>image begin downloading before CSS and JS files downloaded completely, so browser only get viewport at that time</p>
+<p><img src="/media/15047511987323.jpg" alt=""></p>
+<h3 id="Media-Condition"><a href="#Media-Condition" class="headerlink" title="Media Condition"></a>Media Condition</h3><p><code>@media screen</code> can not used</p>
+<p>mostly<br><code>(max-width: 480px)</code> and <code>(min-width: 480px)</code></p>
+<h3 id="Lengths"><a href="#Lengths" class="headerlink" title="Lengths"></a>Lengths</h3><p>vw = viewport width</p>
+<p>100vw = 100% viewport width</p>
+<p>support absolute and relative length, even CSS calc()</p>
+<h3 id="Make-browser-be-smart"><a href="#Make-browser-be-smart" class="headerlink" title="Make browser be smart"></a>Make browser be smart</h3><p>until now, what we done, give more attribute to <code>&lt;img&gt;</code>, is a suggestion to browser, and then make it be smarter to choose better image size</p>
+<p><img src="/media/15047512087785.jpg" alt=""></p>
+<h1 id="Use-Case-Art-Direction"><a href="#Use-Case-Art-Direction" class="headerlink" title="Use Case: Art Direction"></a>Use Case: Art Direction</h1><p>image have gravity, when saw in small screen device, not whole image resize, just crop the meaningful part from image.</p>
+<p><a href="https://cloudfour.com/examples/img-currentsrc/" target="_blank" rel="external">Image Current Src Demo</a></p>
+<p><img src="/media/15047512167536.jpg" alt=""></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">picture</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">srcset</span>=<span class="string">"homepage-person@desktop.png, homepage-person@desktop-2x.png 2x"</span>       </span></div><div class="line"><span class="tag">          <span class="attr">media</span>=<span class="string">"(min-width: 990px)"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">srcset</span>=<span class="string">"homepage-person@tablet.png, homepage-person@tablet-2x.png 2x"</span> </span></div><div class="line"><span class="tag">          <span class="attr">media</span>=<span class="string">"(min-width: 750px)"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">"homepage-person@mobile.png, homepage-person@mobile-2x.png 2x"</span> </span></div><div class="line"><span class="tag">       <span class="attr">alt</span>=<span class="string">"Shopify Merchant, Corrine Anestopoulos"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">picture</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>here, <code>media</code> attribute is a directive to browser rather than a suggestion.</p>
+<h2 id="Attribute-type"><a href="#Attribute-type" class="headerlink" title="Attribute: type"></a>Attribute: type</h2><p>The browser will pick the first source where the declared image type is one that it supports. If it doesn’t recognize any of the source types, it will use the <img> element’s src or srcset declarations.</p>
+<p><img src="/media/15047512263209.jpg" alt=""></p>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><ul>
+<li>Most images on the web fit the resolution switching use case.</li>
+<li>When you’ve got a resolution switching use case, you want to empower the browser to make the best choice possible. This is what srcset is designed to do.</li>
+<li>When you use the <picture> element with media attributes, you’re dictating to the browser what images it should use.</picture></li>
+<li>Therefore, you can and should use <picture> when you want both resolution switching and to support multiple image formats. Just leave off the media attribute so that the browser can do its thing.</picture></li>
+</ul>
+<h1 id="Other-stuff"><a href="#Other-stuff" class="headerlink" title="Other stuff"></a>Other stuff</h1><h2 id="img-fallback-of-SVG"><a href="#img-fallback-of-SVG" class="headerlink" title="img fallback of SVG"></a>img fallback of SVG</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;logo.svg&quot; onerror=&quot;this.src=logo-fallback.png;this.onerror=null;&quot; /&gt;</div></pre></td></tr></table></figure>
+<h2 id="picture-of-SVG"><a href="#picture-of-SVG" class="headerlink" title="picture of SVG"></a>picture of SVG</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;picture&gt;</div><div class="line">    &lt;source type=&quot;image/svg+xml&quot; srcset=&quot;path/to/logo.svg&quot;&gt;</div><div class="line">    &lt;img src=&quot;path/to/logo-1x.png&quot; srcset=&quot;path/to/logo-2x.png 2x, path/to/logo-3x.png 3x&quot; alt=&quot;Logo description&quot;&gt;</div><div class="line">&lt;/picture&gt;</div></pre></td></tr></table></figure>
+<h1 id="Responsive-image-in-CSS"><a href="#Responsive-image-in-CSS" class="headerlink" title="Responsive image in CSS"></a>Responsive image in CSS</h1><h1 id="image-set"><a href="#image-set" class="headerlink" title="image-set"></a>image-set</h1><p><img src="/media/15047512362925.jpg" alt=""></p>
+<h1 id="Media-query"><a href="#Media-query" class="headerlink" title="Media query"></a>Media query</h1><p><img src="/media/15047512441547.jpg" alt=""></p>
+<h1 id="Break-points"><a href="#Break-points" class="headerlink" title="Break points"></a>Break points</h1><p><img src="/media/15047512522102.jpg" alt=""></p>
+<p>Instead of spacing out breakpoints evenly, we should have more breakpoints as the image gets larger.</p>
+<h1 id="Processing-Responsive-Image"><a href="#Processing-Responsive-Image" class="headerlink" title="Processing Responsive Image"></a>Processing Responsive Image</h1><ul>
+<li>Where possible, use resolution independent SVG images.</li>
+<li>When creating or modifying the design of templates, the template author provides the sizes attribute for the various images in the template.</li>
+<li>The srcset attribute with width descriptors is inserted by the server which does all of the heavy lifting of figuring out what image breakpoints to choose for each image.</li>
+<li>Content authors never worry about any of this. Their only responsibility is to upload the highest quality source available and let the image resizing service take care of the rest.</li>
+</ul>
+<h1 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h1><ul>
+<li><strong><a href="https://cloudfour.com/thinks/responsive-images-101-definitions/" target="_blank" rel="external">Responsive Images 101</a></strong></li>
+<li><strong><a href="https://github.com/aFarkas/lazysizes" target="_blank" rel="external">lazysizes</a></strong></li>
+<li><strong><a href="https://dev.opera.com/articles/native-responsive-images/" target="_blank" rel="external">native responsive image</a></strong></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering" target="_blank" rel="external">image-rendering CSS property</a></li>
+<li><a href="https://www.paintcodeapp.com/news/iphone-6-screens-demystified" target="_blank" rel="external">Iphone 6P downsampling</a></li>
+<li><a href="https://sarasoueidan.com/blog/svg-picture/" target="_blank" rel="external">Better SVG Fallback and Art Direction With The <picture> Element</picture></a></li>
+<li><a href="http://www.responsivebreakpoints.com/" target="_blank" rel="external">BreakingPoint Generator</a></li>
+<li><a href="http://caniuse.com/#feat=devicepixelratio" target="_blank" rel="external">Window.devicePixelRatio</a></li>
+<li><a href="http://cloudinary.com/documentation/image_transformation_reference" target="_blank" rel="external">Cloudinary Image Transformation reference</a></li>
+<li><a href="http://cloudinary.com/documentation/responsive_images" target="_blank" rel="external">Cloudinary BreakingPoint Generator</a></li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/06/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
