@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.pervade.tech/2017/09/17/weredux-Redux-on-Rails-0/</loc>
+    
+    <lastmod>2017-09-17T15:42:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.pervade.tech/2017/09/06/hello-world/</loc>
+    
+    <lastmod>2017-09-16T08:11:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.pervade.tech/2017/03/23/Responsive-Image/</loc>
+    
+    <lastmod>2017-09-09T12:41:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.pervade.tech/2017/09/06/Database-Relationship/</loc>
+    
+    <lastmod>2017-09-09T12:41:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.pervade.tech/2017/01/18/%E8%AF%B7%E5%BC%80%E5%90%AFMongoDB%E9%89%B4%E6%9D%83%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2017-09-07T02:44:17.000Z</lastmod>
@@ -12,27 +40,6 @@
     <loc>https://blog.pervade.tech/2017/01/10/Grok-Vi/</loc>
     
     <lastmod>2017-09-07T02:37:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.pervade.tech/2017/03/23/Responsive-Image/</loc>
-    
-    <lastmod>2017-09-07T02:30:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.pervade.tech/2017/09/06/Database-Relationship/</loc>
-    
-    <lastmod>2017-09-07T00:03:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.pervade.tech/2017/09/06/hello-world/</loc>
-    
-    <lastmod>2017-09-06T09:02:03.000Z</lastmod>
     
   </url>
   

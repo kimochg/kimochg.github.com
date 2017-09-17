@@ -3,6 +3,52 @@
   
     
     <entry>
+      <title><![CDATA[weredux - Redux on Rails？[0]]]></title>
+      <url>/2017/09/17/weredux-Redux-on-Rails-0/</url>
+      <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近我在学习 ruby on rails 框架，正巧也参加了今年的 ruby conf 2017。现在的我，有一种感觉特别深刻：ruby 这门语言在给程序员带来启发。那么，ruby 给我带来了什么启发呢？作为一名前端工程师，天天要写 react、redux ，肯定要从这两个万人项目入手，为自己，乃至社区做些贡献。所以，今天我的关键词是 <strong>Conventions</strong>。</p>
+<h1 id="痛点-为什么？"><a href="#痛点-为什么？" class="headerlink" title="痛点 - 为什么？"></a>痛点 - 为什么？</h1><p>我想每个 react 工程师在用 redux 的时候，都会有个感觉，我写的代码好干净，结构真清晰，可惜就是重复的架构导致代码量特别多，小小的一个需求，可能动不动代码量就上千了。同时活在这个 typescript 的时代的我们还要把类型也声明清楚，这无疑对开发速度又是雪上加霜。明明我已经认同这些都是最佳实践了，那对于 redux 来说，我们也可以如同 rails 那样，将这些实践公约化，减少代码量。这就衍生出对应的两个思想：</p>
+<ol>
+<li>少的代码提升可维护性。</li>
+<li>状态管理的过程能够维持同一种最佳实践。</li>
+</ol>
+<h1 id="方案-怎么做？"><a href="#方案-怎么做？" class="headerlink" title="方案 - 怎么做？"></a>方案 - 怎么做？</h1><h2 id="可能的方案"><a href="#可能的方案" class="headerlink" title="可能的方案"></a>可能的方案</h2><ul>
+<li>基于文件系统的层面，类似shell之流生成脚手架文件</li>
+<li>redux 中间件，可以对 action 和 state 同时施加黑魔法</li>
+<li>npm包，类似 <code>redux-ui</code>，通过修饰器对特定的组件包装，统一管理自己的 reducer 和 store</li>
+<li>webpack plugin，打包的时候施展黑魔法</li>
+<li>babel plugin，转义的时候施展黑魔法</li>
+</ul>
+<h2 id="最终目标"><a href="#最终目标" class="headerlink" title="最终目标"></a>最终目标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">weredux generate scaffold user</div></pre></td></tr></table></figure>
+<p>能够生成 <code>fetchUsers</code>, <code>fetchUser</code>, <code>updateUser</code>, <code>deleteUser</code>, <code>createUser</code> 的相关状态管理</p>
+<h3 id="施法范围"><a href="#施法范围" class="headerlink" title="施法范围"></a>施法范围</h3><p>未决定<br>这个地方是我最困惑的地方，Convention 到什么程度才是对的？</p>
+<ul>
+<li>reducer + action types + action creators 这些是必须的核心</li>
+<li>immutable / redux-immutable 所有存于 store 的数据强制 immutable</li>
+<li>normalizr 序列化 json 形成一种关系型数据库存储形态</li>
+<li>集成 react-router 把路由一起黑了</li>
+<li>同时生成测试文件，并暴露类似 migrations/seeds 的用法去处理 persisted state，倾向<code>jest</code></li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我写下这一篇<code>[0]</code>章，就先挖一个坑给自己进行思考… 我坚信的是，所有的语言及框架的使用，如果在自己特有的最佳实践基础上，能够吸纳其他语言优秀的模式、思维、最佳实践，进行思维的碰撞，迸发的火花，肯定会更加绚丽。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> rocket </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> rails </tag>
+            
+            <tag> redux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Database Relationship]]></title>
       <url>/2017/09/06/Database-Relationship/</url>
       <content type="html"><![CDATA[<h1 id="Assumption"><a href="#Assumption" class="headerlink" title="Assumption"></a>Assumption</h1><ol>
@@ -119,9 +165,9 @@
         
         <tags>
             
-            <tag> Note </tag>
+            <tag> note </tag>
             
-            <tag> Rails </tag>
+            <tag> rails </tag>
             
         </tags>
         
@@ -201,7 +247,7 @@
       
         <categories>
             
-            <category> Image </category>
+            <category> image </category>
             
         </categories>
         
