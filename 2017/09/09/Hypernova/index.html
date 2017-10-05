@@ -12,7 +12,7 @@
     
     <title>
         
-            标签: editor | 
+            Hypernova | 
         
         Pervade Tech
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Cheng Liu">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="tech,blog,kimochg">
+    <meta name="keywords" content="tech,blog,kimochg,ssr,note">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://blog.pervade.tech">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: editor | Pervade Tech">
+    <meta property="og:title" content="Hypernova | Pervade Tech">
     <meta property="og:image" content="/img/kimochg/favicon-196x196.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="ssr"> <meta property="og:article:tag" content="note"> 
 
+    
+        <meta property="article:published_time" content="9月 09, 2017" />
+        <meta property="article:modified_time" content="10月 05, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="标签: editor | Pervade Tech">
+    <meta name="twitter:title" content="Hypernova | Pervade Tech">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/kimochg/favicon-196x196.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://blog.pervade.tech/tags/editor/index.html" />
+        <link rel="canonical" href="https://blog.pervade.tech/2017/09/09/Hypernova/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pervade Tech",
+        "logo": "/img/kimochg/favicon-196x196.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Cheng Liu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/kimochg/apple-touch-icon-152x152.png"
+        },
+        "description": "Enjoy Tech Here"
+    },
+    "headline": "Hypernova",
+    "url": "https://blog.pervade.tech/2017/09/09/Hypernova/index.html",
+    "datePublished": "9月 09, 2017",
+    "dateModified": "10月 05, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.pervade.tech"
+    }
+}
+</script>
 
 
     
@@ -271,96 +304,289 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三个基本概念"><span class="post-toc-number">2.</span> <span class="post-toc-text">三个基本概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hypernova-server"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">hypernova-server</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种方法获取component"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">三种方法获取component</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hypernova-client"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">hypernova-client</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hypernova-wrapper"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">hypernova-wrapper</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hypernova-的探索"><span class="post-toc-number">3.</span> <span class="post-toc-text">hypernova 的探索</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/01/10/Grok-Vi/">Grok Vi</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/01/10/Grok-Vi/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Cheng Liu's avatar">
-            </div>
-            <div>
-                <strong>Cheng Liu</strong>
-                <span>1月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/vim/">vim</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Hypernova
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Cheng Liu</strong>
+        <span>9月 09, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACWklEQVR42u3aUVLDMAwE0N7/0nAAaLqSbDeF5y+mZBK/fsTqSo+vP70eeHh4eHh4eHh4N+M94vXLjZ789/qT/Cm9veHh4eGd4b141QbXXOOv7/ATP9kbHh4e3knesw0l1+QHRvKU3t7w8PDw7s+rltHXV+Lh4eH9B15yMFx/NR9/7uHh4f17Xh4W5IBJzPGGrAUPDw8v5uVNpvN/H+3v4eHh4QW8XltrbQwxabP9skM8PDy8zbzJOFSOz2Pc3n7w8PDw7sDrtb56we710/Md4uHh4b2XV0Um7bFq4NsbY8XDw8M7w8sjhoTXGwWolt1P94CHh4e3mVcNFHpDV9U4ozfSioeHh3ee19t0/nKfF+7RNXh4eHibeZPoofcq7zW9CpExHh4e3hFeFI8Ogtdq2d07cvDw8PDO8PIYorrRwphUkToKI/Dw8PCW8hJwcv2kjE7K/RdgPDw8vM28apM+jwbyr6Zayjd/MeDh4eEt5eXN/l5oex0QzwcR8PDw8E7yek39amE9DyMKT8fDw8PbzJu86KsRQ7WtdX1URDEuHh4e3jbe/JO1X1ZejjezFjw8PLylvLVNqfz+1cgYDw8P7568JMCdvMTzeLc5dIWHh4e3gVdd1YNkVVBbGGDFw8PD28x7xKtXEO8rqcsNMDw8PLylvLUlcn7/+ehV8xcDHh4e3iLevOTNI4N5GIGHh4f3ubxqy6parF8/Fw8PD+9TeO8a1YraaXh4eHgHeXmgUA0O5m2wQzEuHh4e3oYGWLXNn0cVvYFXPDw8vPO8v7fw8PDw8PDw8PBusL4BjJMrJkk7Ht0AAAAASUVORK5CYII=">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/note/">note</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/ssr/">ssr</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hypernova&url=https://blog.pervade.tech/2017/09/09/Hypernova/index.html&via=Cheng Liu" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.pervade.tech/2017/09/09/Hypernova/index.html&title=Hypernova" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>airbnb 开源的服务端渲染（ssr）框架</p>
+<p><a href="https://github.com/airbnb/hypernova" target="_blank" rel="external">hypernova</a></p>
+<p><img src="/media/15049625081797.png" alt=""></p>
+<ol>
+<li>用户向服务器请求一个页面</li>
+<li>服务器获取到当前页面的所有数据并准备进行渲染</li>
+<li>此时，hypernova-client (ruby, node) 开始发送到 hypernova-server 请求渲染</li>
+<li>hypernova-server 进行渲染</li>
+<li>服务器将通过 hypernova-server 渲染的标记加入到渲染结果</li>
+<li>在客户端，js 继续进行客户端渲染来实现渐进增强</li>
+</ol>
+<h1 id="三个基本概念"><a href="#三个基本概念" class="headerlink" title="三个基本概念"></a>三个基本概念</h1><ul>
+<li>hypernova-server</li>
+<li>hypernova-client</li>
+<li>hypernova-wrapper</li>
+</ul>
+<h2 id="hypernova-server"><a href="#hypernova-server" class="headerlink" title="hypernova-server"></a>hypernova-server</h2><ol>
+<li>真正执行ssr代码然后生成static html的地方，即一个独立的node环境，专门用来做ssr。</li>
+<li>可以托管在serverless服务器上</li>
+<li>方便，直接发送post请求即可得到ssr后的html</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -X POST -d @payload.json http://localhost:3000/batch --header &quot;Content-Type: application/json&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hypernova = <span class="built_in">require</span>(<span class="string">'hypernova/server'</span>);</div><div class="line"></div><div class="line">hypernova(&#123;</div><div class="line">  devMode: <span class="literal">true</span>,</div><div class="line"></div><div class="line">  getComponent(name) &#123;</div><div class="line">    <span class="keyword">if</span> (name === <span class="string">'MyComponent.js'</span>) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./app/assets/javascripts/MyComponent.js'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  port: <span class="number">3030</span>,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="三种方法获取component"><a href="#三种方法获取component" class="headerlink" title="三种方法获取component"></a>三种方法获取component</h3><ul>
+<li>直接通过静态 件获取，会在 hypernova 内部 wrap 成为 commonJS 组件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line">hypernova(&#123;</div><div class="line">  getComponent: createGetComponent(&#123;</div><div class="line">    MyComponent: path.resolve(path.join(<span class="string">'app'</span>, <span class="string">'assets'</span>, <span class="string">'javascripts'</span>, <span class="string">'MyComponent.js'</span>)),</div><div class="line">  &#125;),</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>直接通过 require 函数，直接传 组件名称</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hypernova(&#123;</div><div class="line">  getComponent: <span class="built_in">require</span>,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>直接通过 promise fetch，获取远端组件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hypernova(&#123;</div><div class="line">  getComponent(name) &#123;</div><div class="line">    <span class="keyword">return</span> promiseFetch(<span class="string">'https://MyComponent'</span>);</div><div class="line">  &#125;,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="hypernova-client"><a href="#hypernova-client" class="headerlink" title="hypernova-client"></a>hypernova-client</h2><p>hypernova-client 是相对于 hypernova-server 的概念，但在真正的代码中其实是对应后端代码，在前端向后端请求的时候 hypernova-client 向 hypernova-server 请求html，然后后端再将得到的结果返回给前端</p>
+<ul>
+<li><a href="https://github.com/airbnb/hypernova-ruby" target="_blank" rel="external">hypernova-ruby</a></li>
+<li><a href="https://github.com/airbnb/hypernova-node" target="_blank" rel="external">hypernova-node</a></li>
+<li><a href="https://github.com/wayfair/hypernova-php" target="_blank" rel="external">hypernova-php</a></li>
+<li>…</li>
+</ul>
+<p>i.e. rails 做为后端，使用 hypernova-ruby 做为 hypernova-client 发送请求</p>
+<ol>
+<li>view</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;%= </div><div class="line">  render_react_component(</div><div class="line">    <span class="string">'MyComponent.js'</span>,</div><div class="line">    <span class="symbol">:name</span> =&gt; <span class="string">'Hypernova The Renderer'</span></div><div class="line">  )</div><div class="line">%&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>model</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">batch = Hypernova::Batch.new(service)</div><div class="line"></div><div class="line"><span class="comment"># each job in a hypernova render batch is identified by a token</span></div><div class="line"><span class="comment"># this allows retrieval of unordered jobs</span></div><div class="line">token = batch.render(</div><div class="line">  <span class="symbol">:name</span> =&gt; <span class="string">'some_bundle.bundle.js'</span>,</div><div class="line">  <span class="symbol">:date</span> =&gt; &#123; <span class="symbol">foo:</span> <span class="number">1</span>, <span class="symbol">bar:</span> <span class="number">2</span> &#125;</div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment"># now we can submit the batch job and await its results</span></div><div class="line"><span class="comment"># this blocks, and takes a significant time in round trips, so try to only</span></div><div class="line"><span class="comment"># use it once per request</span></div><div class="line">result = batch.submit!</div><div class="line"></div><div class="line"><span class="comment"># ok now we can access our rendered strings.</span></div><div class="line">foo1 = result[token].html_safe</div></pre></td></tr></table></figure>
+<h2 id="hypernova-wrapper"><a href="#hypernova-wrapper" class="headerlink" title="hypernova-wrapper"></a>hypernova-wrapper</h2><p>这个地方是 hypernova 框架最有特色的地方，将前端的 react component 上包一层 hypernova-wrapper 就能完成isomerphic，即代码同构。</p>
+<p>这种结构，能够最大程度的兼容老代码，不需要在已有的代码中进行大规模的修改，只需要在最顶层包装高阶组件。</p>
+<ul>
+<li><a href="https://github.com/airbnb/hypernova-react" target="_blank" rel="external">hypernova-react</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; renderReact &#125; <span class="keyword">from</span> <span class="string">'hypernova-react'</span>;</div><div class="line"><span class="keyword">import</span> MyComponent <span class="keyword">from</span> <span class="string">'./src/MyComponent.jsx'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> renderReact(</div><div class="line">  <span class="string">'MyComponent.hypernova.js'</span>, <span class="comment">// this file's name (or really any unique name)</span></div><div class="line">  MyComponent,</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>使用 hypernova-react 高阶组件包装顶层，来配置不同运行环境下的行为。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">hypernova</span>(<span class="params">runner</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">window</span> === <span class="string">'undefined'</span></div><div class="line">    ? runner.server()</div><div class="line">    : runner.client();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> hypernova, &#123; serialize, load &#125; <span class="keyword">from</span> <span class="string">'hypernova'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> renderReact = <span class="function">(<span class="params">name, component</span>) =&gt;</span> hypernova(&#123;</div><div class="line">  server() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">props</span>) =&gt;</span> ReactDOMServer.renderToString(React.createElement(component, props))</div><div class="line">  &#125;,</div><div class="line">  client() &#123;</div><div class="line">    <span class="comment">// client side render</span></div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>利用各种 hypernova-wrapper 来适用不同的业务场景</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> renderFunction = <span class="function">(<span class="params">name, configureStore</span>) =&gt;</span> hypernova(&#123;</div><div class="line">  server: <span class="function"><span class="params">()</span> =&gt;</span> props =&gt; serialize(name, configureStore.server(props)),</div><div class="line">  client: <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> renderMorearty = <span class="function">(<span class="params">name, component, configureStore</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> hypernova(&#123;</div><div class="line">    server() &#123;</div><div class="line">      <span class="keyword">return</span> <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> wrappedComponent = configureStore.server(props);</div><div class="line">        <span class="keyword">return</span> ReactDOMServer.renderToString(React.createElement(wrapperComponent.bootstrap()));</div><div class="line">      &#125;</div><div class="line">      </div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    client() &#123;</div><div class="line">      <span class="keyword">return</span> configureStore.client()</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="hypernova-的探索"><a href="#hypernova-的探索" class="headerlink" title="hypernova 的探索"></a>hypernova 的探索</h1><p>由于 hypernova 的本质是一个 node 服务端，以此来替代原来项目中传统的ssr解决方法。如果可以在这一层再引入中间件，抑或是当做中间件被其他 node 服务引入，那么 hypernova 会更加强大。<br>例如，react-router 自带了ssr，但是无法集成进 hypernova-server<br>又如，webpack 的 devServer 也是一个node进程，如果可以将 hypernova-server 集成进 devServer，那么本地调试的时候，就不用另起一个 hypernova 的 node 进程。</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/17/weredux-Redux-on-Rails-0/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/06/Database-Relationship/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -520,6 +746,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

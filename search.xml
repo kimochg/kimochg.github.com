@@ -49,6 +49,91 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Hypernova]]></title>
+      <url>/2017/09/09/Hypernova/</url>
+      <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>airbnb 开源的服务端渲染（ssr）框架</p>
+<p><a href="https://github.com/airbnb/hypernova" target="_blank" rel="external">hypernova</a></p>
+<p><img src="/media/15049625081797.png" alt=""></p>
+<ol>
+<li>用户向服务器请求一个页面</li>
+<li>服务器获取到当前页面的所有数据并准备进行渲染</li>
+<li>此时，hypernova-client (ruby, node) 开始发送到 hypernova-server 请求渲染</li>
+<li>hypernova-server 进行渲染</li>
+<li>服务器将通过 hypernova-server 渲染的标记加入到渲染结果</li>
+<li>在客户端，js 继续进行客户端渲染来实现渐进增强</li>
+</ol>
+<h1 id="三个基本概念"><a href="#三个基本概念" class="headerlink" title="三个基本概念"></a>三个基本概念</h1><ul>
+<li>hypernova-server</li>
+<li>hypernova-client</li>
+<li>hypernova-wrapper</li>
+</ul>
+<h2 id="hypernova-server"><a href="#hypernova-server" class="headerlink" title="hypernova-server"></a>hypernova-server</h2><ol>
+<li>真正执行ssr代码然后生成static html的地方，即一个独立的node环境，专门用来做ssr。</li>
+<li>可以托管在serverless服务器上</li>
+<li>方便，直接发送post请求即可得到ssr后的html</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -X POST -d @payload.json http://localhost:3000/batch --header &quot;Content-Type: application/json&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hypernova = <span class="built_in">require</span>(<span class="string">'hypernova/server'</span>);</div><div class="line"></div><div class="line">hypernova(&#123;</div><div class="line">  devMode: <span class="literal">true</span>,</div><div class="line"></div><div class="line">  getComponent(name) &#123;</div><div class="line">    <span class="keyword">if</span> (name === <span class="string">'MyComponent.js'</span>) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./app/assets/javascripts/MyComponent.js'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  port: <span class="number">3030</span>,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="三种方法获取component"><a href="#三种方法获取component" class="headerlink" title="三种方法获取component"></a>三种方法获取component</h3><ul>
+<li>直接通过静态 件获取，会在 hypernova 内部 wrap 成为 commonJS 组件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line">hypernova(&#123;</div><div class="line">  getComponent: createGetComponent(&#123;</div><div class="line">    MyComponent: path.resolve(path.join(<span class="string">'app'</span>, <span class="string">'assets'</span>, <span class="string">'javascripts'</span>, <span class="string">'MyComponent.js'</span>)),</div><div class="line">  &#125;),</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>直接通过 require 函数，直接传 组件名称</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hypernova(&#123;</div><div class="line">  getComponent: <span class="built_in">require</span>,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>直接通过 promise fetch，获取远端组件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hypernova(&#123;</div><div class="line">  getComponent(name) &#123;</div><div class="line">    <span class="keyword">return</span> promiseFetch(<span class="string">'https://MyComponent'</span>);</div><div class="line">  &#125;,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="hypernova-client"><a href="#hypernova-client" class="headerlink" title="hypernova-client"></a>hypernova-client</h2><p>hypernova-client 是相对于 hypernova-server 的概念，但在真正的代码中其实是对应后端代码，在前端向后端请求的时候 hypernova-client 向 hypernova-server 请求html，然后后端再将得到的结果返回给前端</p>
+<ul>
+<li><a href="https://github.com/airbnb/hypernova-ruby" target="_blank" rel="external">hypernova-ruby</a></li>
+<li><a href="https://github.com/airbnb/hypernova-node" target="_blank" rel="external">hypernova-node</a></li>
+<li><a href="https://github.com/wayfair/hypernova-php" target="_blank" rel="external">hypernova-php</a></li>
+<li>…</li>
+</ul>
+<p>i.e. rails 做为后端，使用 hypernova-ruby 做为 hypernova-client 发送请求</p>
+<ol>
+<li>view</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;%= </div><div class="line">  render_react_component(</div><div class="line">    <span class="string">'MyComponent.js'</span>,</div><div class="line">    <span class="symbol">:name</span> =&gt; <span class="string">'Hypernova The Renderer'</span></div><div class="line">  )</div><div class="line">%&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>model</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">batch = Hypernova::Batch.new(service)</div><div class="line"></div><div class="line"><span class="comment"># each job in a hypernova render batch is identified by a token</span></div><div class="line"><span class="comment"># this allows retrieval of unordered jobs</span></div><div class="line">token = batch.render(</div><div class="line">  <span class="symbol">:name</span> =&gt; <span class="string">'some_bundle.bundle.js'</span>,</div><div class="line">  <span class="symbol">:date</span> =&gt; &#123; <span class="symbol">foo:</span> <span class="number">1</span>, <span class="symbol">bar:</span> <span class="number">2</span> &#125;</div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment"># now we can submit the batch job and await its results</span></div><div class="line"><span class="comment"># this blocks, and takes a significant time in round trips, so try to only</span></div><div class="line"><span class="comment"># use it once per request</span></div><div class="line">result = batch.submit!</div><div class="line"></div><div class="line"><span class="comment"># ok now we can access our rendered strings.</span></div><div class="line">foo1 = result[token].html_safe</div></pre></td></tr></table></figure>
+<h2 id="hypernova-wrapper"><a href="#hypernova-wrapper" class="headerlink" title="hypernova-wrapper"></a>hypernova-wrapper</h2><p>这个地方是 hypernova 框架最有特色的地方，将前端的 react component 上包一层 hypernova-wrapper 就能完成isomerphic，即代码同构。</p>
+<p>这种结构，能够最大程度的兼容老代码，不需要在已有的代码中进行大规模的修改，只需要在最顶层包装高阶组件。</p>
+<ul>
+<li><a href="https://github.com/airbnb/hypernova-react" target="_blank" rel="external">hypernova-react</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; renderReact &#125; <span class="keyword">from</span> <span class="string">'hypernova-react'</span>;</div><div class="line"><span class="keyword">import</span> MyComponent <span class="keyword">from</span> <span class="string">'./src/MyComponent.jsx'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> renderReact(</div><div class="line">  <span class="string">'MyComponent.hypernova.js'</span>, <span class="comment">// this file's name (or really any unique name)</span></div><div class="line">  MyComponent,</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>使用 hypernova-react 高阶组件包装顶层，来配置不同运行环境下的行为。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">hypernova</span>(<span class="params">runner</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">window</span> === <span class="string">'undefined'</span></div><div class="line">    ? runner.server()</div><div class="line">    : runner.client();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> hypernova, &#123; serialize, load &#125; <span class="keyword">from</span> <span class="string">'hypernova'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> renderReact = <span class="function">(<span class="params">name, component</span>) =&gt;</span> hypernova(&#123;</div><div class="line">  server() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">props</span>) =&gt;</span> ReactDOMServer.renderToString(React.createElement(component, props))</div><div class="line">  &#125;,</div><div class="line">  client() &#123;</div><div class="line">    <span class="comment">// client side render</span></div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>利用各种 hypernova-wrapper 来适用不同的业务场景</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> renderFunction = <span class="function">(<span class="params">name, configureStore</span>) =&gt;</span> hypernova(&#123;</div><div class="line">  server: <span class="function"><span class="params">()</span> =&gt;</span> props =&gt; serialize(name, configureStore.server(props)),</div><div class="line">  client: <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> renderMorearty = <span class="function">(<span class="params">name, component, configureStore</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> hypernova(&#123;</div><div class="line">    server() &#123;</div><div class="line">      <span class="keyword">return</span> <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> wrappedComponent = configureStore.server(props);</div><div class="line">        <span class="keyword">return</span> ReactDOMServer.renderToString(React.createElement(wrapperComponent.bootstrap()));</div><div class="line">      &#125;</div><div class="line">      </div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    client() &#123;</div><div class="line">      <span class="keyword">return</span> configureStore.client()</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="hypernova-的探索"><a href="#hypernova-的探索" class="headerlink" title="hypernova 的探索"></a>hypernova 的探索</h1><p>由于 hypernova 的本质是一个 node 服务端，以此来替代原来项目中传统的ssr解决方法。如果可以在这一层再引入中间件，抑或是当做中间件被其他 node 服务引入，那么 hypernova 会更加强大。<br>例如，react-router 自带了ssr，但是无法集成进 hypernova-server<br>又如，webpack 的 devServer 也是一个node进程，如果可以将 hypernova-server 集成进 devServer，那么本地调试的时候，就不用另起一个 hypernova 的 node 进程。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> ssr </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ssr </tag>
+            
+            <tag> note </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Database Relationship]]></title>
       <url>/2017/09/06/Database-Relationship/</url>
       <content type="html"><![CDATA[<h1 id="Assumption"><a href="#Assumption" class="headerlink" title="Assumption"></a>Assumption</h1><ol>
