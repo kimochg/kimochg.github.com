@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.pervade.tech/2017/10/06/Rails-integrate-with-Mongodb/</loc>
+    
+    <lastmod>2017-10-06T02:41:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.pervade.tech/2017/09/09/Hypernova/</loc>
     
     <lastmod>2017-10-05T12:21:53.000Z</lastmod>

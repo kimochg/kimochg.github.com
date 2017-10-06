@@ -12,7 +12,7 @@
     
     <title>
         
-            分类: vim | 
+            Rails integrate with Mongodb | 
         
         Pervade Tech
     </title>
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://blog.pervade.tech">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: vim | Pervade Tech">
+    <meta property="og:title" content="Rails integrate with Mongodb | Pervade Tech">
     <meta property="og:image" content="/img/kimochg/favicon-196x196.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="10月 06, 2017" />
+        <meta property="article:modified_time" content="10月 06, 2017" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="分类: vim | Pervade Tech">
+    <meta name="twitter:title" content="Rails integrate with Mongodb | Pervade Tech">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/kimochg/favicon-196x196.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://blog.pervade.tech/categories/vim/index.html" />
+        <link rel="canonical" href="https://blog.pervade.tech/2017/10/06/Rails-integrate-with-Mongodb/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pervade Tech",
+        "logo": "/img/kimochg/favicon-196x196.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Cheng Liu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/kimochg/apple-touch-icon-152x152.png"
+        },
+        "description": "Enjoy Tech Here"
+    },
+    "headline": "Rails integrate with Mongodb",
+    "url": "https://blog.pervade.tech/2017/10/06/Rails-integrate-with-Mongodb/index.html",
+    "datePublished": "10月 06, 2017",
+    "dateModified": "10月 06, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.pervade.tech"
+    }
+}
+</script>
 
 
     
@@ -271,96 +304,233 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Install"><span class="post-toc-number">1.</span> <span class="post-toc-text">Install</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Config"><span class="post-toc-number">2.</span> <span class="post-toc-text">Config</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Basic-Usage"><span class="post-toc-number">3.</span> <span class="post-toc-text">Basic Usage</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Model-DAO-class"><span class="post-toc-number">4.</span> <span class="post-toc-text">Model - DAO class</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Resources"><span class="post-toc-number">5.</span> <span class="post-toc-text">Resources</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/01/10/Grok-Vi/">Grok Vi</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/01/10/Grok-Vi/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Cheng Liu's avatar">
-            </div>
-            <div>
-                <strong>Cheng Liu</strong>
-                <span>1月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/vim/">vim</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Rails integrate with Mongodb
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Cheng Liu</strong>
+        <span>10月 06, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACzElEQVR42u3ay07EMAwF0Pn/n4YtEpr22g6ik5yuEKSPk42xb15fR14vbGxsbGxsbGxs7EeyX/H1c/3ve6MXB8+8Xtn7ZmxsbOwT2MnnXlMTRnWzrrc7vxcbGxv7HHa1aCWAvPy825R8E2/uwsbGxsbOxzeXmEnzg42NjY29qoBdI/MCVi172NjY2NjzodKqldVR1PybsbGxsfdmT4Le//r5n/NtbGxs7Mewe1f0mupnBX8dfTM2Njb2puz50cZkxJMDqqFy/nZsbGzsXdnJI5IBUDWUzYtW9a9vvw0bGxt7U3Y+ak8C2mq7Ut3ifOOWpSLY2NjYj2f3otNqo/J3BzoLTQs2Njb2puxJgFo9cJM0MPma8vFNbGxs7IPZvRYlDwl6Q6V8C7CxsbHPYVdJ8wFQdVvzZzZnadjY2NgfyO4VleS4T3VENQkbsLGxsbGrvOqIfzLc7x3xuWlFsLGxsbdj9wpYtbDlWzBve7CxsbHPYecFI28/euvzgDkZfkWzNGxsbOwt2NVhUN7GXPPmgUS+HhsbG3tvdh7NFsY3xSB2HhUvO6mEjY2N/eHs6ui/OiqalKh5YIyNjY29K3sS+k6GQb3y1gsksLGxsfdmV0czSUMyOXDTG1qNUhFsbGzsD2fnAUBv/FRtbNauxMbGxj6B3Qtl137oJAYYxQPY2NjY27GTf/dz3toot3cvNjY29jns6kOTcHcy3E++J99obGxs7NPYvbYkaS16ocKyUBkbGxt7U/aqqCAvUflxyV4hfLsSGxsbe1N2tTBUy0z195NNvCmQ2NjY2Fuz8+JRbSGqpXEynLpZiY2NjX0Au1e08kLSG/H3BknL4gFsbGzsTdl52eht0GTjsLGxsbGrAUAPnL8lbzywsbGxsSch66oYYBLuNo/RY2NjY2/BngS9a8tSNdAtlDpsbGzsTdnnXNjY2NjY2NjY2NiPub4BqEvO4dH7JyYAAAAASUVORK5CYII=">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Rails integrate with Mongodb&url=https://blog.pervade.tech/2017/10/06/Rails-integrate-with-Mongodb/index.html&via=Cheng Liu" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.pervade.tech/2017/10/06/Rails-integrate-with-Mongodb/index.html&title=Rails integrate with Mongodb" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><p>add gem to Gemfile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem &apos;mongoid&apos;, &apos;~&gt; 5.0.0&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bundle install</div></pre></td></tr></table></figure>
+<h1 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rails g mongoid:config</div></pre></td></tr></table></figure>
+<p>this command will create a config file at <code>./config/mongoid.yml</code></p>
+<p>Please set up your mongodb config inside.</p>
+<p>add a bootstrap when rails startup in <code>./config/application.rb&#39;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Mongoid.load!(&apos;./config/mongoid.yml&apos;)</div></pre></td></tr></table></figure>
+<h1 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h1><p>assume we have a collection called <code>zips</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">rails c</div><div class="line"></div><div class="line">mongo_client = Mongid::Clients.default</div><div class="line"></div><div class="line">mongo_client.database.name</div><div class="line"></div><div class="line">collection = mongo_client[:zips]</div><div class="line"></div><div class="line">collection.count</div></pre></td></tr></table></figure>
+<h1 id="Model-DAO-class"><a href="#Model-DAO-class" class="headerlink" title="Model - DAO class"></a>Model - DAO class</h1><p><code>models/zip.rb</code></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Zip</span></span></div><div class="line"></div><div class="line">	<span class="comment"># convenience method for access to client in console</span></div><div class="line">	<span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">mongo_client</span></span></div><div class="line">    	Mongoid::Clients.default</div><div class="line">    <span class="keyword">end</span></div><div class="line">    </div><div class="line">    <span class="comment"># convenience method for access to zips collection</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">collection</span></span></div><div class="line">    	<span class="keyword">self</span>.mongo_client[<span class="string">'zips'</span>]</div><div class="line">    <span class="keyword">end</span></div><div class="line">    </div><div class="line">    <span class="comment"># all maps to find</span></div><div class="line">    <span class="comment"># Implement a find that returns a collection of document as hashes</span></div><div class="line">    <span class="comment"># Use initialize(hash) to express individual documents as a class</span></div><div class="line">    <span class="comment"># * prototype - query example for value equality</span></div><div class="line">    <span class="comment"># * sort - hash expressing mult-term sort order</span></div><div class="line">    <span class="comment"># * offset - document to start results</span></div><div class="line">    <span class="comment"># * limit - number of documents to include</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">all</span><span class="params">(prototype=&#123;&#125;, sort=&#123;<span class="symbol">:population</span> =&gt; <span class="number">1</span>&#125;, offset=<span class="number">0</span>, limit=<span class="number">100</span>)</span></span></div><div class="line">    	<span class="comment"># map internal :population term to :pop document term</span></div><div class="line">        tmp = &#123;&#125;</div><div class="line">        sort.each <span class="keyword">do</span> <span class="params">|k, v|</span></div><div class="line">        	k = k.to_sym == <span class="symbol">:population</span> ? <span class="symbol">:pop</span> : k.to_sym</div><div class="line">            tmp[k] = v <span class="keyword">if</span> [<span class="symbol">:city</span>, <span class="symbol">:state</span>, <span class="symbol">:pop</span>].<span class="keyword">include</span>?(k)</div><div class="line">        <span class="keyword">end</span></div><div class="line">        sort = tmp</div><div class="line">        </div><div class="line">        <span class="keyword">self</span>.collection.find(prototype).sort(sort).skip(offset).limit(limit)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    </div><div class="line">    <span class="comment"># find maps to find(hash)</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span> <span class="title">id</span></span></div><div class="line">    	Rails.logger.debug &#123; <span class="string">"getting zip <span class="subst">#&#123;id&#125;</span>"</span> &#125;</div><div class="line">        </div><div class="line">        doc = <span class="keyword">self</span>.<span class="keyword">class</span>.collecition.find(<span class="symbol">:_id</span> =&gt; id).projection(&#123;<span class="symbol">:_id</span> =&gt; <span class="literal">true</span>, <span class="symbol">:city</span> =&gt; <span class="literal">true</span>, <span class="symbol">:state</span> =&gt; <span class="literal">true</span>, <span class="symbol">:pop</span> =&gt; <span class="literal">true</span>&#125;).first</div><div class="line">    </div><div class="line">    doc.<span class="literal">nil</span>? <span class="literal">nil</span> : Zip.new(doc)</div><div class="line">    </div><div class="line">    <span class="comment"># save maps to insert_one</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">save</span></span></div><div class="line">    	Rails.logger.debug &#123; <span class="string">"saving <span class="subst">#&#123;<span class="keyword">self</span>&#125;</span>"</span> &#125;</div><div class="line">    	<span class="keyword">self</span>.<span class="keyword">class</span>.collection.insert_one(<span class="symbol">_id:</span> @id, <span class="symbol">city:</span> @city, <span class="symbol">state:</span> @state, <span class="symbol">pop:</span> @population)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    </div><div class="line">    <span class="comment"># update maps to update_one</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(updates)</span></span></div><div class="line">    	Rails.logger.debug &#123; <span class="string">"updating <span class="subst">#&#123;<span class="keyword">self</span>&#125;</span> with <span class="subst">#&#123;updates&#125;</span>"</span> &#125;</div><div class="line">        </div><div class="line">        <span class="comment"># map internal :population term to :pop document term</span></div><div class="line">        update[<span class="symbol">:pop</span>] = updates[<span class="symbol">:population</span>] <span class="keyword">if</span> !updates[<span class="symbol">:population</span>].<span class="literal">nil</span>?</div><div class="line">        update.slice!(<span class="symbol">:city</span>, <span class="symbol">:state</span>, <span class="symbol">:pop</span>) <span class="keyword">if</span> !updates.<span class="literal">nil</span>?</div><div class="line">        </div><div class="line">        <span class="keyword">self</span>.<span class="keyword">class</span>.collection.find(<span class="symbol">_id:</span> @id).update_one(updates)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    </div><div class="line">    <span class="comment"># destroy maps to delete_one</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">destroy</span></span></div><div class="line">    	Rails.logger.debug &#123; <span class="string">"destroying <span class="subst">#&#123;<span class="keyword">self</span>&#125;</span>"</span> &#125;</div><div class="line">        <span class="keyword">self</span>.<span class="keyword">class</span>.collection.find(<span class="symbol">_id:</span> @id).delete_one</div><div class="line">    <span class="keyword">end</span></div><div class="line">     </div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h1 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h1><ul>
+<li><a href="https://docs.mongodb.com/mongoid/master/tutorials/mongoid-installation/" target="_blank" rel="external">Official Installation Doc</a></li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/17/weredux-Redux-on-Rails-0/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
